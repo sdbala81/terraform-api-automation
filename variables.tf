@@ -1,24 +1,45 @@
-variable "acr_resource_group_name" {
-  description = "The name of the resource group for ACR"
+variable "auth0_domain" {
+  description = "Auth0 domain"
   type        = string
 }
 
-variable "location" {
-  description = "The location of the resource group"
+variable "auth0_client_id" {
+  description = "Auth0 Client ID"
   type        = string
 }
 
-variable "acr_name" {
-  description = "The name of the Azure Container Registry"
+variable "auth0_client_secret" {
+  description = "Auth0 Client Secret"
   type        = string
 }
 
-variable "acr_sku" {
-  description = "The SKU of the Azure Container Registry"
+variable "organization_name" {
+  description = "Name of the organization"
   type        = string
 }
 
-variable "subscription_id" {
-  description = "The subscription ID for Azure"
+variable "subscriptions" {
+  description = "Subscriptions associated with the organization"
+  type        = string
+}
+
+variable "environment" {
+  description = "Deployment environment (e.g., prod, dev)"
+  type        = string
+}
+
+
+variable "organization_administrator_name" {
+  description = "The full name of the organization administrator."
+  type        = string
+}
+
+variable "organization_administrator_email" {
+  description = "The email of the organization administrator."
+  type        = string
+}
+
+variable "organization_administrator_password" {
+  description = "The password for the organization administrator."
   type        = string
 }
